@@ -8,6 +8,8 @@
     $pendaftar = DB::table('forms')->count();
     $cowok = DB::table('forms')->where('gender', '=', 'L')->count();
     $cewek = DB::table('forms')->where('gender', '=', 'P')->count();
+    $grow20 = number_format(DB::table('forms')->count()/21*100)-100;
+    $grow19 = DB::table('forms')->count()-27/100;
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,9 +78,7 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="https://instagram.com/nihon05sjc"
-                                target="_blank">
+                            <a class="nav-link" href="https://instagram.com/nihon05sjc" target="_blank">
                                 <i class="ni ni-spaceship"></i>
                                 <span class="nav-link-text">Tutorial</span>
                             </a>
@@ -362,7 +362,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Total Pendaftar</h5>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total <br>Pendaftar
+                                            </h5>
                                             <span class="h2 font-weight-bold mb-0">{{$pendaftar}}</span>
                                         </div>
                                         <div class="col-auto">
@@ -383,7 +384,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Laki Laki</h5>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar<br>Laki-Laki
+                                            </h5>
                                             <span class="h2 font-weight-bold mb-0">{{$cowok}}</span>
                                         </div>
                                         <div class="col-auto">
@@ -404,7 +406,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Perempuan</h5>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar<br>Perempuan
+                                            </h5>
                                             <span class="h2 font-weight-bold mb-0">{{$cewek}}</span>
                                         </div>
                                         <div class="col-auto">
@@ -425,8 +428,9 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Perkembangan</h5>
-                                            <span class="h2 font-weight-bold mb-0">49,65%</span>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Perkembangan Sejak
+                                                2020</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{$grow20}}%</span>
                                         </div>
                                         <div class="col-auto">
                                             <div
@@ -452,7 +456,6 @@
                         <!-- Card header -->
                         <div class="card-header border-0">
                             <h3 class="mb-0">User Nlyone</h3>
-                        </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
@@ -538,8 +541,6 @@
             </div>
         </div>
     </footer>
-    </div>
-    </div>
     <!-- Argon Scripts -->
     <!-- Core -->
     <script src="{{asset('dashboard/assets/vendor/jquery/dist/jquery.min.js')}}"></script>

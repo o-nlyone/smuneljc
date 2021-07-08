@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SmunelJC</title>
-        <link rel="icon" href="{{asset('dashboard/assets/img/brand/favicon.png')}}" type="image/png">
+    <title>Document</title>
+    <link rel="icon" href="{{asset('dashboard/assets/img/brand/favicon.png')}}" type="image/png">
     <style>
         .centerp {
                 margin: 0;
@@ -52,5 +52,6 @@
 </head>
 <body style="background-color: #F63854;">
     <img src="{{asset('white.png')}}" class="centerp">
+    <a style="margin-top: 6%; text-align: center; font-family: sans-serif; color: white;" class="centerp"> July, 10</a>
 </body>
 </html>

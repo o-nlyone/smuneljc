@@ -18,7 +18,7 @@ class LoginController extends Controller
         return view('auth.dashboard');
     }
 
-    public function Login(){
+    public function Login(Request $request){
 
         $attr = request()->validate([
             'email' => 'required',
@@ -29,7 +29,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($attr)){
             Auth::login($user);
-            return redirect()->intended('/');
+            return redirect()->intended('/');  
         } else {
             return back()->with('error', 'Email / Password Salah!')->withInput();
 
