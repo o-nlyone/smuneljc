@@ -2,7 +2,7 @@
 
     use App\Http\Controllers\auth\logoutController;
     use Jenssegers\Agent\Agent as Agent;
-    use routes\web;
+    include ("route\web.php");
 
     $Agent = new Agent();
 
