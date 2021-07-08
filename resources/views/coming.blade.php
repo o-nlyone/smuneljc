@@ -52,6 +52,5 @@
 </head>
 <body style="background-color: #F63854;">
     <img src="{{asset('white.png')}}" class="centerp">
-    <a style="margin-top: 6%; text-align: center; font-family: sans-serif; color: white;" class="centerp"> July, 10</a>
 </body>
 </html>
