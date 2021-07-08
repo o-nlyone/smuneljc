@@ -21,10 +21,4 @@ Route::group(['middleware'=> ['auth']], function(){
 
 Route::get('/', function () {
     return view('coming');
-    $filecounter=("counter.txt");
-    $kunjungan=file($filecounter);
-    $kunjungan[0]++;
-    $file=fopen($filecounter,"w");
-    fputs($file,"$kunjungan[0]");
-    fclose($file);
 });
