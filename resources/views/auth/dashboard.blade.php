@@ -408,7 +408,7 @@
                                         <div class="col">
                                             <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar<br>Perempuan
                                             </h5>
-                                            <span class="h2 font-weight-bold mb-0">{{$cewek}}</span>
+                                            <span class="h2 font-weight-bold mb-0">{{$kunjungan[0]}}</span>
                                         </div>
                                         <div class="col-auto">
                                             <div
