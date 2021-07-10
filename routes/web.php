@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware'=> ['guest']], function(){
     Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('login', [loginController::class, 'login'])->name('login');
-    Route::get('daftar', [DaftarController::class, 'showDaftarForm']);
+    // Route::get('daftar', [DaftarController::class, 'showDaftarForm']);
+    Route::get('daftar', function () {
+        return view('coming');
+    });
     Route::post('daftar', [DaftarController::class, 'daftar']);
     Route::get('list-daftar', [DaftarController::class, 'showlist']);
 });
