@@ -66,13 +66,13 @@
         <hr class="d-lg-none" />
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.facebook.com/nihon05sjc" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
+            <a class="nav-link nav-link-icon" href="https://www.facebook.com/smuneljc" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
               <i class="fab fa-facebook-square"></i>
               <span class="nav-link-inner--text d-lg-none">Facebook</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.instagram.com/nihon05sjc" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">
+            <a class="nav-link nav-link-icon" href="https://www.instagram.com/smuneljc" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">
               <i class="fab fa-instagram"></i>
               <span class="nav-link-inner--text d-lg-none">Instagram</span>
             </a>
@@ -158,29 +158,34 @@
                     <input name="kelas" class="form-control" type="text" placeholder="IPS4/GUGUS4" id="example-email-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="example-email-input" class="form-control-label">Whatsapp</label>
+                    <label id="wassap" for="example-email-input" class="form-control-label">Whatsapp</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">+62</span>
                         </div>
-                        <input name="phone" type="text" class="form-control" placeholder="081234567890" aria-label="081234567890" aria-describedby="basic-addon1">
+                        <input name="phone" type="text" class="form-control" placeholder="81234567890" aria-label="81234567890" aria-describedby="basic-addon1">
                     </div>
+                    <a href="#wassap" class="text-light"><small>Pastikan Nomor Whatsappmu Aktif</small></a>
                 </div>
                 <div class="form-group">
-                    <label for="example-email-input" class="form-control-label">PIN</label>
-                    <input name="pin" class="form-control" type="number" placeholder="0123456" id="example-email-input" required>
+                    <label id="pinning" for="example-email-input" class="form-control-label">PIN</label>
+                    <input name="pin" class="form-control" type="number" placeholder="6 Digit Angka" id="example-email-input" required>
+                    <a href="#pinning" class="text-light"><small>PIN digunakan untuk mengedit formulir</small></a>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary my-4">Masuk</button>
+                    <button type="submit" class="btn btn-primary my-4">Daftar SJC</button>
                   </div>
               </form>
             </div>
           </div>
           <div class="row mt-3">
             <div class="col-6">
+              <a href="https://wa.me/6285158113733" class="text-dark"><small>Bingung?, Tanyakan Disini</small></a>
             </div>
             <div class="col-6 text-right">
+              {{-- <a href="#" class="text-light"><small>PIN digunakan untuk mengedit</small></a> --}}
             </div>
+          </div>
           </div>
         </div>
       </div>

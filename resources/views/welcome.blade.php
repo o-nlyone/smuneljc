@@ -83,7 +83,7 @@
                             <div class="header-button">
                                 @guest
                                 <a rel="nofollow" href="daftar" class="btn btn-common">Daftar Sekarang</a>
-                                <a href="https://www.instagram.com/nihon05sjc/" target="_blank"
+                                <a href="https://www.instagram.com/smuneljc/" target="_blank"
                                     class="btn btn-border video-popup">Instagram</a>
                                 @endguest
                                 @auth
@@ -406,7 +406,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12 text-right wow fadeInRight" data-wow-delay="0.3s">
-                    </br><a href="https://www.instagram.com/nihon05sjc/" class="btn btn-common">Lihat Instagram</a>
+                    </br><a href="https://www.instagram.com/smuneljc/" class="btn btn-common">Lihat Instagram</a>
                 </div>
             </div>
         </div>
@@ -427,9 +427,9 @@
                                     SMA Negeri 5 Makassar</p>
                             </div>
                             <div class="social-icon">
-                                <a class="facebook" href="https://facebook.com/nihon05sjc" target="_blank"><i
+                                <a class="facebook" href="https://facebook.com/smuneljc" target="_blank"><i
                                         class="lni-facebook-filled"></i></a>
-                                <a class="instagram" href="https://instagram.com/nihon05sjc" target="_blank"><i
+                                <a class="instagram" href="https://instagram.com/smuneljc" target="_blank"><i
                                         class="lni-instagram-filled"></i></a>
                             </div>
                         </div>
@@ -437,8 +437,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
                         <h3 class="footer-titel">Sosial Media</h3>
                         <ul class="footer-link">
-                            <li><a href="https://instagram.com/nihon05sjc" target="_blank">Instagram</a></li>
-                            <li><a href="https://facebook.com/nihon05sjc" target="_blank">Facebook</a></li>
+                            <li><a href="https://instagram.com/smuneljc" target="_blank">Instagram</a></li>
+                            <li><a href="https://facebook.com/smuneljc" target="_blank">Facebook</a></li>
                             <li><a href="#">TikTok</a></li>
                         </ul>
                     </div>
@@ -474,7 +474,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="copyright-content">
-                            <p>Copyright © 2021 <a rel="nofollow" href="https://instagram.com/nihon05sjc">Smunel
+                            <p>Copyright © 2021 <a rel="nofollow" href="https://instagram.com/smuneljc">Smunel
                                     Japanese Community</a> All Right
                                 Reserved</p>
                         </div>

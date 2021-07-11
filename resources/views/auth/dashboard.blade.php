@@ -1,15 +1,15 @@
 <?php
 
-    use App\Http\Controllers\auth\logoutController;
-    use Jenssegers\Agent\Agent as Agent;
+use App\Http\Controllers\auth\logoutController;
+use Jenssegers\Agent\Agent as Agent;
 
-    $Agent = new Agent();
+$Agent = new Agent();
 
-    $pendaftar = DB::table('forms')->count();
-    $cowok = DB::table('forms')->where('gender', '=', 'L')->count();
-    $cewek = DB::table('forms')->where('gender', '=', 'P')->count();
-    $grow20 = number_format(DB::table('forms')->count()/21*100)-100;
-    $grow19 = DB::table('forms')->count()-27/100;
+$pendaftar = DB::table('forms')->count();
+$cowok = DB::table('forms')->where('gender', '=', 'L')->count();
+$cewek = DB::table('forms')->where('gender', '=', 'P')->count();
+$grow20 = number_format(DB::table('forms')->count()/21*100)-100;
+$grow19 = DB::table('forms')->count()-27/100;
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,6 +32,7 @@
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{asset('dashboard/assets/css/argon.css?v=1.2.0')}}" type="text/css">
 </head>
+
 
 <body>
     <!-- Sidenav -->
@@ -63,7 +64,7 @@
                         </li>
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link active" href="/dash">
+                            <a class="nav-link" href="/dash">
                                 <i class="ni ni-tv-2 text-primary"></i>
                                 <span class="nav-link-text">Dashboard</span>
                             </a>
@@ -78,9 +79,20 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://instagram.com/nihon05sjc" target="_blank">
+                            <a class="nav-link"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#pesan">
                                 <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Tutorial</span>
+                                <span class="nav-link-text">Atur Pesan Default</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://wa.me/6281354000500"
+                                target="_blank">
+                                <i class="ni ni-spaceship"></i>
+                                <span class="nav-link-text">Tukang Servis</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -138,119 +150,6 @@
                                 aria-expanded="false">
                                 <i class="ni ni-bell-55"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                                <!-- Dropdown header -->
-                                <div class="px-3 py-3">
-                                    <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong>
-                                        notifications.</h6>
-                                </div>
-                                <!-- List group -->
-                                <div class="list-group list-group-flush">
-                                    <a href="#!" class="list-group-item list-group-item-action">
-                                        <div class="row align-items-center">
-                                            <div class="col-auto">
-                                                <!-- Avatar -->
-                                                <img alt="Image placeholder" src="assets/img/theme/team-1.jpg"
-                                                    class="avatar rounded-circle">
-                                            </div>
-                                            <div class="col ml--2">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <h4 class="mb-0 text-sm">{{ auth()->user()->name }}</h4>
-                                                    </div>
-                                                    <div class="text-right text-muted">
-                                                        <small>2 hrs ago</small>
-                                                    </div>
-                                                </div>
-                                                <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#!" class="list-group-item list-group-item-action">
-                                        <div class="row align-items-center">
-                                            <div class="col-auto">
-                                                <!-- Avatar -->
-                                                <img alt="Image placeholder" src="assets/img/theme/team-2.jpg"
-                                                    class="avatar rounded-circle">
-                                            </div>
-                                            <div class="col ml--2">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <h4 class="mb-0 text-sm">{{ auth()->user()->name }}</h4>
-                                                    </div>
-                                                    <div class="text-right text-muted">
-                                                        <small>3 hrs ago</small>
-                                                    </div>
-                                                </div>
-                                                <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#!" class="list-group-item list-group-item-action">
-                                        <div class="row align-items-center">
-                                            <div class="col-auto">
-                                                <!-- Avatar -->
-                                                <img alt="Image placeholder" src="assets/img/theme/team-3.jpg"
-                                                    class="avatar rounded-circle">
-                                            </div>
-                                            <div class="col ml--2">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <h4 class="mb-0 text-sm">{{ auth()->user()->name }}</h4>
-                                                    </div>
-                                                    <div class="text-right text-muted">
-                                                        <small>5 hrs ago</small>
-                                                    </div>
-                                                </div>
-                                                <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#!" class="list-group-item list-group-item-action">
-                                        <div class="row align-items-center">
-                                            <div class="col-auto">
-                                                <!-- Avatar -->
-                                                <img alt="Image placeholder" src="assets/img/theme/team-4.jpg"
-                                                    class="avatar rounded-circle">
-                                            </div>
-                                            <div class="col ml--2">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <h4 class="mb-0 text-sm">{{ auth()->user()->name }}</h4>
-                                                    </div>
-                                                    <div class="text-right text-muted">
-                                                        <small>2 hrs ago</small>
-                                                    </div>
-                                                </div>
-                                                <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#!" class="list-group-item list-group-item-action">
-                                        <div class="row align-items-center">
-                                            <div class="col-auto">
-                                                <!-- Avatar -->
-                                                <img alt="Image placeholder" src="assets/img/theme/team-5.jpg"
-                                                    class="avatar rounded-circle">
-                                            </div>
-                                            <div class="col ml--2">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <h4 class="mb-0 text-sm">{{ auth()->user()->name }}</h4>
-                                                    </div>
-                                                    <div class="text-right text-muted">
-                                                        <small>3 hrs ago</small>
-                                                    </div>
-                                                </div>
-                                                <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- View all -->
-                                <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View
-                                    all</a>
-                            </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -258,43 +157,25 @@
                                 <i class="ni ni-ungroup"></i>
                             </a>
                             <div
-                                class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
+                                class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-white  dropdown-menu-right ">
                                 <div class="row shortcuts px-4">
                                     <a href="#!" class="col-4 shortcut-item">
                                         <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                                             <i class="ni ni-calendar-grid-58"></i>
                                         </span>
-                                        <small>Calendar</small>
+                                        <small>Menu1</small>
                                     </a>
                                     <a href="#!" class="col-4 shortcut-item">
                                         <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
                                             <i class="ni ni-email-83"></i>
                                         </span>
-                                        <small>Email</small>
+                                        <small>Menu2</small>
                                     </a>
                                     <a href="#!" class="col-4 shortcut-item">
                                         <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                                             <i class="ni ni-credit-card"></i>
                                         </span>
-                                        <small>Payments</small>
-                                    </a>
-                                    <a href="#!" class="col-4 shortcut-item">
-                                        <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                                            <i class="ni ni-books"></i>
-                                        </span>
-                                        <small>Reports</small>
-                                    </a>
-                                    <a href="#!" class="col-4 shortcut-item">
-                                        <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                                            <i class="ni ni-pin-3"></i>
-                                        </span>
-                                        <small>Maps</small>
-                                    </a>
-                                    <a href="#!" class="col-4 shortcut-item">
-                                        <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                                            <i class="ni ni-basket"></i>
-                                        </span>
-                                        <small>Shop</small>
+                                        <small>Menu3</small>
                                     </a>
                                 </div>
                             </div>
@@ -306,7 +187,8 @@
                                 aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="{{asset(auth()->user()->photo)}}">
+                                        <img alt="Image placeholder"
+                                            src="{{asset('dashboard/assets/img/brand/white.png')}}">
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
                                         <span class="mb-0 text-sm  font-weight-bold">{{ auth()->user()->name }}</span>
@@ -317,22 +199,6 @@
                                 <div class="dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome!</h6>
                                 </div>
-                                <a href="profile" class="dropdown-item">
-                                    <i class="ni ni-single-02"></i>
-                                    <span>My profile</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-settings-gear-65"></i>
-                                    <span>Settings</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-calendar-grid-58"></i>
-                                    <span>Activity</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-support-16"></i>
-                                    <span>Support</span>
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ url('logout') }}" class="dropdown-item">
                                     <i class="ni ni-user-run"></i>
@@ -351,10 +217,10 @@
                 <div class="header-body">
                     <div class="row align-items-center py-4">
                         <div class="col-lg-6 col-7">
-                            <h6 class="h2 text-white d-inline-block mb-0">Admin SJC</h6>
+                            <h6 class="h2 text-white d-inline-block mb-0">Dashboard Pendaftaran</h6>
                         </div>
                     </div>
-                    <!-- Card stats -->
+                    {{-- cards --}}
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <div class="card card-stats">
@@ -362,41 +228,15 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Total <br>Pendaftar
-                                            </h5>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total Pendaftar 2021</h5>
                                             <span class="h2 font-weight-bold mb-0">{{$pendaftar}}</span>
                                         </div>
                                         <div class="col-auto">
-                                            <div
-                                                class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                                <i class="ni ni-active-40"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="mt-3 mb-0 text-sm">
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card card-stats">
-                                <!-- Card body -->
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar<br>Laki-Laki
-                                            </h5>
-                                            <span class="h2 font-weight-bold mb-0">{{$cowok}}</span>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div
-                                                class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                            <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
                                                 <i class="ni ni-chart-pie-35"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="mt-3 mb-0 text-sm">
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -406,19 +246,15 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar<br>Perempuan
-                                            </h5>
-                                            <span class="h2 font-weight-bold mb-0">{{$cewek}}</span>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar Laki-Laki</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{$cowok}}</span>
                                         </div>
                                         <div class="col-auto">
-                                            <div
-                                                class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                                                <i class="ni ni-money-coins"></i>
+                                            <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="mt-3 mb-0 text-sm">
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -428,23 +264,38 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Perkembangan Sejak
-                                                2020</h5>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Pendaftar Perempuan</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{$cewek}}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-gradient-pink text-white rounded-circle shadow">
+                                                <i class="ni ni-chart-pie-35"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card card-stats">
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Perkembangan Pendaftar 2021</h5>
                                             <span class="h2 font-weight-bold mb-0">{{$grow20}}%</span>
                                         </div>
                                         <div class="col-auto">
-                                            <div
-                                                class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                            <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
                                                 <i class="ni ni-chart-bar-32"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="mt-3 mb-0 text-sm">
-                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {{-- endcards --}}
                 </div>
             </div>
         </div>
@@ -455,14 +306,19 @@
                     <div class="card">
                         <!-- Card header -->
                         <div class="card-header border-0">
-                            <h3 class="mb-0">User Nlyone</h3>
+                            <h3 class="mb-0">Data Pendaftar</h3>
+                        </div>
+                        <!-- Light table -->
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col" class="sort" data-sort="name">No.</th>
-                                        <th scope="col" class="sort" data-sort="budget">Stambuk</th>
+                                        <th scope="col" class="sort" data-sort="budget">NIS</th>
                                         <th scope="col" class="sort" data-sort="status">Nama</th>
+                                        <th scope="col" class="sort" data-sort="status">WhatsApp</th>
+                                        <th scope="col" class="sort" data-sort="status"></th>
+                                        <th scope="col" class="sort" data-sort="status">PIN</th>
                                         <th scope="col" class="sort" data-sort="status">Edit</th>
                                     </tr>
                                 </thead>
@@ -470,7 +326,7 @@
 
                                     <?php
                             $querys = DB::table('forms')->get();
-
+                            $pesan = DB::table('details')->where('idtext', '1')->first();
                             foreach ($querys as $key) {
                             ?>
 
@@ -483,64 +339,217 @@
                                             <span class="status">{{$key->stb}}</span>
                                         </td>
                                         <td>
-                                            <span class="status">{{$key->name}}</span>
+                                            <span class="badge badge-dot mr-4">
+                                                @if ($key->gender == 'L')
+                                                    <i class="bg-teal"></i>
+                                                @endif
+                                                @if ($key->gender == 'P')
+                                                <i class="bg-pink"></i>
+                                                @endif
+
+                                                <span class="status">{{$key->name}}</span>
+                                            </span>
                                         </td>
                                         <td>
-                                            @if ($key->id != 1)
+                                            <span class="status">{{$key->phone}}</span>
+                                        </td>
+                                        <td>
+                                            <a href="https://api.whatsapp.com/send/?phone=%2B62{{$key->phone}}
+                                                @if ($pesan->pesan == ".")
+
+                                                @else
+                                                    &text=Hai%20{{$key->name}}%2C%0A{{$pesan->pesan}}
+                                                @endif
+                                                " target="_blank" type="button" class="btn btn-success">Chat</a>
+                                        </td>
+                                        <td>
+                                            <span class="status">{{$key->pin}}</span>
+                                        </td>
+                                        <td>
                                             <div class="dropdown">
                                                 <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                    <form action="deleted" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="id" value="{{$key->id}}">
+                                                        <input type="submit" class="dropdown-item"
+                                                            value="Hapus Formulir">
+                                                    </form>
                                                     <a href="#" data-toggle="modal" data-target="#hey{{$key->id}}"
                                                         class="dropdown-item">Edit Formulir</a>
                                                 </div>
                                             </div>
-                                            @endif
                                         </td>
                                     </tr>
-                                    {{-- SELESAI table --}}
+                                    {{-- endtable --}}
+                                    {{-- modal --}}
+                                    <div class="modal fade" id="hey{{$key->id}}" tabindex="-1" role="dialog"
+                                        aria-labelledby="#hey{{$key->id}}" aria-hidden="true">
+                                        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div class="card bg-secondary border-0 mb-0">
+                                                        <div class="card-body px-lg-5 py-lg-5">
+                                                            <div class="text-center text-muted mb-4">
+                                                                <small>Edit Formulir {{$key->name}}</small>
+                                                            </div>
+                                                            <form role="form" action="update" method="POST">
+                                                                @csrf
+                                                                <div class="form-group">
+                                                                    <label for="example-text-input" class="form-control-label">ID</label>
+                                                                    <input name="id" class="form-control" value="{{$key->id}}" type="text" placeholder="Nama Lengkap" id="example-text-input" readonly>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="example-text-input"
+                                                                        class="form-control-label">Nama</label>
+                                                                    <input name="name" class="form-control" type="text"
+                                                                        placeholder="Nama Lengkap"
+                                                                        value="{{$key->name}}" id="example-text-input"
+                                                                        required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="example-search-input"
+                                                                        class="form-control-label">NIS (bukan
+                                                                        NISN)</label>
+                                                                    <input name="stb" class="form-control" type="search"
+                                                                        value="{{$key->stb}}" placeholder="2021xxx"
+                                                                        id="example-search-input" required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="example-email-input"
+                                                                        class="form-control-label">Kelas/Gugus</label>
+                                                                    <input name="kelas" class="form-control" type="text"
+                                                                        value="{{$key->kelas}}"
+                                                                        placeholder="IPS4/GUGUS4"
+                                                                        id="example-email-input" required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="example-email-input"
+                                                                        class="form-control-label">Whatsapp</label>
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"
+                                                                                id="basic-addon1">+62</span>
+                                                                        </div>
+                                                                        <input name="phone" type="text"
+                                                                            class="form-control" value="{{$key->phone}}"
+                                                                            placeholder="081234567890"
+                                                                            aria-label="081234567890"
+                                                                            aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="example-email-input"
+                                                                        class="form-control-label">PIN</label>
+                                                                    <input name="pin" class="form-control" type="number"
+                                                                        placeholder="0123456" value="{{$key->pin}}"
+                                                                        id="example-email-input" required>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <button type="submit"
+                                                                        class="btn btn-primary my-4">Update</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- endmodal --}}
+
                                     <?php
                     }
                     ?>
                                 </tbody>
                             </table>
                         </div>
+                        <!-- Card footer -->
+                        <div class="card-footer py-4">
+                            @if (session()->get('success'))
+                            <div class="alert alert-success" role="alert">
+                                <strong>Success!</strong> {{session('success')}}
+                            </div>
+                            @endif
+                            <nav aria-label="...">
+                                <ul class="pagination justify-content-end mb-0">
+                                    <li class="page-item">
+                                        <div class="mb0 text-right">
+                                            <a href="#"
+                                                class="btn btn-sm btn-default">Print Semua Formulir</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Footer -->
+            <footer class="footer pt-0">
+                <div class="row align-items-center justify-content-lg-between">
+                    <div class="col-lg-6">
+                        <div class="copyright text-center  text-lg-left  text-muted">
+                            &copy; 2020 <a href="https://www.smuneljc.xyz" class="font-weight-bold ml-1"
+                                target="_blank">SJC</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                            <li class="nav-item">
+                                <a href="https://www.smuneljc.xyz" class="nav-link" target="_blank">SJC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.smuneljc.xyz" class="nav-link"
+                                    target="_blank">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.smuneljc.xyz" class="nav-link" target="_blank">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6">
-                <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
-                        target="_blank">Nlyone</a>
+
+    {{-- modalpesan --}}
+    <div class="modal fade" id="pesan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Chat WA Default</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="whatsapp" method="post">
+                @csrf
+                <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Pesan</label><br>
+                            <a href="#" class="text-light">Hai, (Nama).</a>
+                            <textarea name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="3">{{$pesan->pesan}}</textarea>
+                        </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Nlyone</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About
-                            Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md"
-                            class="nav-link" target="_blank">MIT License</a>
-                    </li>
-                </ul>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+          </div>
         </div>
-    </footer>
+      </div>
+    {{-- endmodalpesan --}}
     <!-- Argon Scripts -->
     <!-- Core -->
     <script src="{{asset('dashboard/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
@@ -548,9 +557,7 @@
     <script src="{{asset('dashboard/assets/vendor/js-cookie/js.cookie.js')}}"></script>
     <script src="{{asset('dashboard/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
     <script src="{{asset('dashboard/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
-    <!-- Optional JS -->
-    <script src="{{asset('dashboard/assets/vendor/chart.js/dist/Chart.min.js')}}"></script>
-    <script src="{{asset('dashboard/assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
+    <script src="{{asset('dashboard/assets/vendor/dropzone/dist/min/dropzone.min.js')}}"></script>
     <!-- Argon JS -->
     <script src="{{asset('dashboard/assets/js/argon.js?v=1.2.0')}}"></script>
 </body>
