@@ -251,7 +251,7 @@ $grow19 = DB::table('forms')->count()-27/100;
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                                <i class="ni ni-chart-pie-35"></i>
+                                                <i class="ni ni-single-02"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -269,7 +269,7 @@ $grow19 = DB::table('forms')->count()-27/100;
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-gradient-pink text-white rounded-circle shadow">
-                                                <i class="ni ni-chart-pie-35"></i>
+                                                <i class="ni ni-single-02"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -317,8 +317,9 @@ $grow19 = DB::table('forms')->count()-27/100;
                                         <th scope="col" class="sort" data-sort="budget">NIS</th>
                                         <th scope="col" class="sort" data-sort="status">Nama</th>
                                         <th scope="col" class="sort" data-sort="status">WhatsApp</th>
-                                        <th scope="col" class="sort" data-sort="status"></th>
+                                        <th scope="col" class="sort" data-sort="status">Nomor WA</th>
                                         <th scope="col" class="sort" data-sort="status">PIN</th>
+                                        <th scope="col" class="sort" data-sort="status">Waktu Daftar</th>
                                         <th scope="col" class="sort" data-sort="status">Edit</th>
                                     </tr>
                                 </thead>
@@ -346,12 +347,8 @@ $grow19 = DB::table('forms')->count()-27/100;
                                                 @if ($key->gender == 'P')
                                                 <i class="bg-pink"></i>
                                                 @endif
-
                                                 <span class="status">{{$key->name}}</span>
                                             </span>
-                                        </td>
-                                        <td>
-                                            <span class="status">{{$key->phone}}</span>
                                         </td>
                                         <td>
                                             <a href="https://api.whatsapp.com/send/?phone=%2B62{{$key->phone}}
@@ -363,7 +360,13 @@ $grow19 = DB::table('forms')->count()-27/100;
                                                 " target="_blank" type="button" class="btn btn-success">Chat</a>
                                         </td>
                                         <td>
+                                            <span class="status">{{$key->phone}}</span>
+                                        </td>
+                                        <td>
                                             <span class="status">{{$key->pin}}</span>
+                                        </td>
+                                        <td>
+                                            <span class="status">{{$key->tgl_daftar}}</span>
                                         </td>
                                         <td>
                                             <div class="dropdown">
