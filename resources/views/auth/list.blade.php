@@ -309,7 +309,7 @@
                         <div class="col-6">
                         </div>
                         <div class="col-6 text-right">
-                            <a href="https://wa.me/6285158113733" class="text-dark"><small>Lupa Pin?, Chat disini</small></a>
+                            <a href="https://wa.me/62895338033117" class="text-dark"><small>Lupa Pin?, Chat disini</small></a>
                         </div>
                     </div>
                 </div>

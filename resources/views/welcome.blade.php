@@ -459,10 +459,10 @@
                                     Makassar</a>
                             </li>
                             <li>
-                                <a href="#"><i class="lni-phone-handset"></i> P: +64 8515 5811 3733</a>
+                                <a href="http://wa.me/62895338033117"><i class="lni-phone-handset"></i> P: +62 8953 3803 3117</a>
                             </li>
                             <li>
-                                <a href="#"><i class="lni-envelope"></i> E: nihon05sjc@gmail.com</a>
+                                <a href="mailto:"><i class="lni-envelope"></i> E: nihon05sjc@gmail.com</a>
                             </li>
                         </ul>
                     </div>

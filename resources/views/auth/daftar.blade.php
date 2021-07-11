@@ -180,7 +180,7 @@
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <a href="https://wa.me/6285158113733" class="text-dark"><small>Bingung?, Tanyakan Disini</small></a>
+              <a href="https://wa.me/62895338033117" class="text-dark"><small>Bingung?, Tanyakan Disini</small></a>
             </div>
             <div class="col-6 text-right">
               {{-- <a href="#" class="text-light"><small>PIN digunakan untuk mengedit</small></a> --}}
