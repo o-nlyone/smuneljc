@@ -80,6 +80,11 @@ a:not([href]):not([tabindex]) {
   position: relative;
 }
 
+.videoplay {
+    width: 560px;
+    height: 315px;
+}
+
 .section-titles {
     font-size: 30px;
     color: #F63854;

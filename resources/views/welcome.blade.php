@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-                    <img class="img-fluid" src="{{asset('home/assets/img/about/img-1.png')}}" alt="">
+                    <iframe class="videoplay" src="https://www.youtube.com/embed/cU4ChENEDbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
