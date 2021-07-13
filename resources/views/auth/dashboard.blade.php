@@ -82,9 +82,18 @@ $grow19 = DB::table('forms')->count()-27/100;
                             <a class="nav-link"
                                 href="#"
                                 data-toggle="modal"
+                                data-target="#securitycode">
+                                <i class="ni ni-lock-circle-open"></i>
+                                <span class="nav-link-text">Security Code</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="#"
+                                data-toggle="modal"
                                 data-target="#pesan">
-                                <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Atur Pesan Default</span>
+                                <i class="ni ni-single-copy-04"></i>
+                                <span class="nav-link-text">Pesan Default</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -328,6 +337,7 @@ $grow19 = DB::table('forms')->count()-27/100;
                                     <?php
                             $querys = DB::table('forms')->get();
                             $pesan = DB::table('details')->where('idtext', '1')->first();
+                            $code = DB::table('details')->where('idtext', '2')->first();
                             foreach ($querys as $key) {
                             ?>
 
@@ -486,7 +496,7 @@ $grow19 = DB::table('forms')->count()-27/100;
                                 <ul class="pagination justify-content-end mb-0">
                                     <li class="page-item">
                                         <div class="mb0 text-right">
-                                            <a href="#"
+                                            <a href="print"
                                                 class="btn btn-sm btn-default">Print Semua Formulir</a>
                                         </div>
                                     </li>
@@ -553,6 +563,35 @@ $grow19 = DB::table('forms')->count()-27/100;
         </div>
       </div>
     {{-- endmodalpesan --}}
+
+        {{-- modalpesan --}}
+        <div class="modal fade" id="securitycode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Kode Pendaftaran</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form action="code" method="post">
+                    @csrf
+                    <div class="modal-body">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Kode</label><br>
+                                <input name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{$code->pesan}}" onkeyup="this.value = this.value.toUpperCase();">
+                                <a href="#" class="text-light"><small>Kode ini akan menjadi syarat bagi calon anggota untuk mendaftar</small></a>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        {{-- endmodalpesan --}}
     <!-- Argon Scripts -->
     <!-- Core -->
     <script src="{{asset('dashboard/assets/vendor/jquery/dist/jquery.min.js')}}"></script>

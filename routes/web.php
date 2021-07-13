@@ -18,13 +18,16 @@ Route::group(['middleware'=> ['guest']], function(){
 });
 
 Route::get('list-daftar', [DaftarController::class, 'showlist']);
+Route::post('/updatepeserta', [DaftarController::class, 'updatepeserta']);
 
 Route::group(['middleware'=> ['auth']], function(){
     Route::get('/logout', [logoutController::class, 'index']);
     Route::get('/dash',   [loginController::class, 'showDashboard']);
     Route::post('/deleted',   [loginController::class, 'deleteData']);
-    Route::post('/update', [DaftarController::class, 'updateAdmin']);
     Route::post('/whatsapp', [DaftarController::class, 'wamessage']);
+    Route::post('/code', [DaftarController::class, 'securecode']);
+    Route::post('/update', [DaftarController::class, 'updateAdmin']);
+    Route::get('/print', [LoginController::class, 'printform']);
 });
 
 Route::get('/', function () {

@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <div class="card-body px-lg-5 py-lg-5">
-                            @if (session()->get('error'))
+                            @if (session()->get('err-log'))
                             <div class="alert alert-danger" role="alert">
                                 <strong>Error!</strong> {{session('error')}}
                             </div>
@@ -186,10 +186,12 @@
                                         {{-- pincheck --}}
                                         <div class="modal fade" id="pin{{$key->id}}" tabindex="-1" role="dialog"
                                             aria-labelledby="#hey{{$key->id}}" aria-hidden="true">
-                                            <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                                            <div class="modal-dialog modal- modal-dialog-centered modal-sm"
+                                                role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                             <span aria-hidden="true">×</span>
                                                         </button>
                                                     </div>
@@ -199,16 +201,18 @@
                                                                 <div class="text-center text-muted mb-4">
                                                                     <small>Edit Formulir {{$key->name}}</small>
                                                                 </div>
-                                                                <form role="form" action="pincheck" method="POST">
+                                                                <form role="form" action="pincheck" method="post">
                                                                     @csrf
                                                                     <div class="form-group">
                                                                         <label for="example-text-input"
                                                                             class="form-control-label">PIN</label>
-                                                                        <input name="pin" class="form-control" type="number"
-                                                                            placeholder="6 Digit Angka" id="example-text-input"
-                                                                            required>
+                                                                        <input name='id' value="{{$key->id}}" hidden/>
+                                                                        <input name="pin" class="form-control"
+                                                                            type="number" placeholder="6 Digit Angka"
+                                                                            id="example-text-input" required>
                                                                     </div>
-                                                                    <input type="submit" data-toggle="modal" data-target="#hey{{$key->id}}" data-dismiss="modal" aria-label="Close" class="btn btn-primary btn-sm" value="edit" />
+                                                                    <button type="submit"
+                                                                        class="btn btn-primary btn-sm">Edit</button>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -218,48 +222,43 @@
                                         </div>
                                         {{-- endpincheck --}}
 
-                                            {{-- modal --}}
-                                        <div class="modal fade" id="hey{{$key->id}}" tabindex="-1" role="dialog"
-                                            aria-labelledby="#hey{{$key->id}}" aria-hidden="true">
-                                            <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">×</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body p-0">
-                                                        <div class="card bg-secondary border-0 mb-0">
-                                                            <div class="card-body px-lg-5 py-lg-5">
+
+
+
+                                        @if (!empty(Session::get('error_code')) && Session::get('error_code') == 5+$key->id+5)
+                                        {{-- modal --}}
                                                                 <div class="text-center text-muted mb-4">
                                                                     <small>Edit Formulir {{$key->name}}</small>
                                                                 </div>
-                                                                @if (session()->get('match'))
-                                                                <form role="form" action="update" method="POST">
+                                                                <form role="form" action="updatepeserta" method="POST">
                                                                     @csrf
-                                                                        <input name="id" class="form-control" value="{{$key->id}}" type="text" placeholder="Nama Lengkap" id="example-text-input" hidden>
+                                                                    <input name="id" class="form-control"
+                                                                        value="{{$key->id}}" type="text"
+                                                                        placeholder="Nama Lengkap"
+                                                                        id="example-text-input" hidden>
 
                                                                     <div class="form-group">
                                                                         <label for="example-text-input"
                                                                             class="form-control-label">Nama</label>
-                                                                        <input name="name" class="form-control" type="text"
-                                                                            placeholder="Nama Lengkap"
-                                                                            value="{{$key->name}}" id="example-text-input"
-                                                                            required>
+                                                                        <input name="name" class="form-control"
+                                                                            type="text" placeholder="Nama Lengkap"
+                                                                            value="{{$key->name}}"
+                                                                            id="example-text-input" required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label for="example-search-input"
                                                                             class="form-control-label">NIS (bukan
                                                                             NISN)</label>
-                                                                        <input name="stb" class="form-control" type="search"
-                                                                            value="{{$key->stb}}" placeholder="2021xxx"
+                                                                        <input name="stb" class="form-control"
+                                                                            type="search" value="{{$key->stb}}"
+                                                                            placeholder="2021xxx"
                                                                             id="example-search-input" readonly>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label for="example-email-input"
                                                                             class="form-control-label">Kelas/Gugus</label>
-                                                                        <input name="kelas" class="form-control" type="text"
-                                                                            value="{{$key->kelas}}"
+                                                                        <input name="kelas" class="form-control"
+                                                                            type="text" value="{{$key->kelas}}"
                                                                             placeholder="IPS4/GUGUS4"
                                                                             id="example-email-input" required>
                                                                     </div>
@@ -272,7 +271,8 @@
                                                                                     id="basic-addon1">+62</span>
                                                                             </div>
                                                                             <input name="phone" type="text"
-                                                                                class="form-control" value="{{$key->phone}}"
+                                                                                class="form-control"
+                                                                                value="{{$key->phone}}"
                                                                                 placeholder="081234567890"
                                                                                 aria-label="081234567890"
                                                                                 aria-describedby="basic-addon1">
@@ -283,23 +283,18 @@
                                                                             class="btn btn-primary my-4">Update</button>
                                                                     </div>
                                                                 </form>
-                                                                @else
-                                                                <div class="alert alert-danger" role="alert">
-                                                                    <strong>Error!</strong> Pin Salah
-                                                                </div>
-                                                                @endif
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         {{-- endmodal --}}
+                                        @endif
 
 
                                         <?php
                                     }
                                     ?>
+                                    @if (!empty(Session::get('error_code')) && Session::get('error_code') == 6)
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong>Error!</strong> Pin Salah
+                                    </div>
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -309,7 +304,8 @@
                         <div class="col-6">
                         </div>
                         <div class="col-6 text-right">
-                            <a href="https://wa.me/62895338033117" class="text-dark"><small>Lupa Pin?, Chat disini</small></a>
+                            <a href="https://wa.me/62895338033117" class="text-dark"><small>Lupa Pin?, Chat
+                                    disini</small></a>
                         </div>
                     </div>
                 </div>
@@ -351,5 +347,7 @@
     <!-- Argon JS -->
     <script src="{{asset('dashboard/assets/js/argon.js?v=1.2.0')}}"></script>
 </body>
+
+
 
 </html>

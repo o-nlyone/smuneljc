@@ -46,4 +46,9 @@ class LoginController extends Controller
 
         }
     }
+
+    public function printform()
+    {
+        return view("auth.print");
+    }
 }
