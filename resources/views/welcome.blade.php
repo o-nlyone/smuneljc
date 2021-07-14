@@ -135,99 +135,103 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-                    <iframe class="videoplay" src="https://www.youtube.com/embed/yOCq7sCmhAk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="videoplay" src="https://www.youtube.com/embed/yOCq7sCmhAk?controls=0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
     <!-- About Section End -->
 
-        <!-- Pricing section Start -->
-        <section id="pricing" class="section-padding">
-            <div class="container">
-              <div class="section-header text-center">
+    <!-- Pricing section Start -->
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
                 <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Pencapaian</h2>
                 <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-              </div>
-              <div class="row">
+            </div>
+            <div class="row">
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="title">
                     </div>
                     <div class="title">
                     </div>
-                  <div class="table wow fadeInLeft" data-wow-delay="1.2s">
-                    <div class="icon-box">
-                      <i class="lni-star"></i>
+                    <div class="table wow fadeInLeft" data-wow-delay="1.2s">
+                        <div class="icon-box">
+                            <i class="lni-star"></i>
+                        </div>
+                        <div class="pricing-header">
+                            <p class="price-value">Program Kerja</p>
+                        </div>
+                        <div class="title">
+                            <h3>5 Program Kerja</h3>
+                        </div>
+                        <ul class="description">
+                            <li>Gakuensai Festival</li>
+                            <li>Tenji Kyanpu</li>
+                            <li>Workshop Manga</li>
+                            <li>Kegiatan Mingguan</li>
+                            <li>PKK-SJC</li>
+                        </ul>
                     </div>
-                    <div class="pricing-header">
-                      <p class="price-value">Program Kerja</p>
-                    </div>
-                    <div class="title">
-                        <h3>5 Program Kerja</h3>
-                    </div>
-                    <ul class="description">
-                      <li>Gakuensai Festival</li>
-                      <li>Tenji Kyanpu</li>
-                      <li>Workshop Manga</li>
-                      <li>Kegiatan Mingguan</li>
-                      <li>PKK-SJC</li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs-12 active">
-                  <div class="table wow fadeInUp" id="active-tb" data-wow-delay="1.2s">
-                    <div class="icon-box">
-                      <i class="lni-star"></i>
+                    <div class="table wow fadeInUp" id="active-tb" data-wow-delay="1.2s">
+                        <div class="icon-box">
+                            <i class="lni-star"></i>
+                        </div>
+                        <div class="pricing-header">
+                            <p class="price-value">Prestasi</p>
+                        </div>
+                        <div class="title">
+                            <h3>14 Prestasi</h3>
+                        </div>
+                        <ul class="description">
+                            <li>Juara 1 Yonkoma 2018</li>
+                            <li>Juara 1 Cosplay CF 2018</li>
+                            <li>Juara 1 Cerdas Cermat 2016</li>
+                            <li>Juara 1, 2, 3 Art Contest 2020</li>
+                            <li>Juara 2 Baca Kana 2019</li>
+                            <li>Juara 2, 3 Baca Kanji 2019</li>
+                            <li>Juara 2 Baca Kana 2017</li>
+                            <li>Juara 3 Chara Design 2019</li>
+                            <li>Juara 3 Yonkoma 2019</li>
+                            <li>Juara H2 Kanji CF 2019</li>
+                            <li>Juara H2 Ranking 1 2019</li>
+                        </ul>
                     </div>
-                    <div class="pricing-header">
-                      <p class="price-value">Prestasi</p>
-                    </div>
-                    <div class="title">
-                        <h3>14 Prestasi</h3>
-                    </div>
-                    <ul class="description">
-                      <li>Juara 1 Yonkoma 2018</li>
-                      <li>Juara 1 Cosplay CF 2018</li>
-                      <li>Juara 1 Cerdas Cermat 2016</li>
-                      <li>Juara 1, 2, 3 Art Contest 2020</li>
-                      <li>Juara 2 Baca Kana 2019</li>
-                      <li>Juara 2, 3 Baca Kanji 2019</li>
-                      <li>Juara 2 Baca Kana 2017</li>
-                      <li>Juara 3 Chara Design 2019</li>
-                      <li>Juara 3 Yonkoma 2019</li>
-                      <li>Juara H2 Kanji CF 2019</li>
-                      <li>Juara H2 Ranking 1 2019</li>
-                    </ul>
-                 </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="title">
                     </div>
                     <div class="title">
                     </div>
-                  <div class="table wow fadeInRight" data-wow-delay="1.2s">
-                    <div class="icon-box">
-                      <i class="lni-star"></i>
+                    <div class="table wow fadeInRight" data-wow-delay="1.2s">
+                        <div class="icon-box">
+                            <i class="lni-star"></i>
+                        </div>
+                        <div class="pricing-header">
+                            <p class="price-value">Karya Kreatif</p>
+                        </div>
+                        <div class="title">
+                            <h3>20+ Karya</h3>
+                        </div>
+                        <ul class="description">
+                            <li>Itsuha & Itsuki</li>
+                            <li>5 Yonkoma Manga</li>
+                            <li>4 Summer Theme Art</li>
+                            <li>10+ Shodo</li>
+                            <li>Website Profil</li>
+                        </ul>
                     </div>
-                    <div class="pricing-header">
-                      <p class="price-value">Karya Kreatif</p>
-                    </div>
-                    <div class="title">
-                      <h3>20+ Karya</h3>
-                    </div>
-                    <ul class="description">
-                      <li>Itsuha & Itsuki</li>
-                      <li>5 Yonkoma Manga</li>
-                      <li>4 Summer Theme Art</li>
-                      <li>10+ Shodo</li>
-                      <li>Website Profil</li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
             </div>
-          </section>
-          <!-- Pricing Table Section End -->
+        </div>
+    </section>
+    <!-- Pricing Table Section End -->
+
 
     <section id="team" class="section-padding bg-gray">
         <div class="container">
@@ -307,7 +311,8 @@
                         </div>
                         <div class="contetn">
                             <div class="info-text">
-                                <h3><a target="_blank" href="https://instagram.com/putrymarsya_">Putri Qoidah Marsya</a></h3>
+                                <h3><a target="_blank" href="https://instagram.com/putrymarsya_">Putri Qoidah Marsya</a>
+                                </h3>
                                 <p>Bendahara SJC</p>
                             </div>
                             <p>Do good without expecting anything in return.</p>
@@ -323,7 +328,64 @@
         </div>
     </section>
 
+
+
     {{-- divisi --}}
+
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Divisi</h2>
+                <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <p style="color:#f5365c; font-family: 'Quicksand', serif;">火</p>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Hi'</a></h3>
+                            <p> Bagaimana Menjadikan Wajah Ekskul Yang Lebih
+                                Menarik Bagi Siswa Lain ataupun Masyarakat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
+                        <div class="icon">
+                            <p style="color:#2dce89; font-family: 'Quicksand', serif;">風</p>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Kaze</a></h3>
+                            <p> Bagaimana Menjadikan Ekskul Sebagai Tempat
+                                Yang Menyenangkan Bagi Setiap Komponen di
+                                Dalamnya.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+                        <div class="icon">
+                            <p style="color:#11cdef; font-family: 'Quicksand', serif;">水</p>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">Mizu</a></h3>
+                            <p> Bagaimana Menjadikan Budaya & Bahasa
+                                Jepang Lebih Menarik dan Lebih Menyenangkan
+                                Dipelajari.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <section id="testimonial" class="testimonial section-padding">
         <div class="container">
@@ -459,7 +521,8 @@
                                     Makassar</a>
                             </li>
                             <li>
-                                <a href="http://wa.me/62895338033117"><i class="lni-phone-handset"></i> P: +62 8953 3803 3117</a>
+                                <a href="http://wa.me/62895338033117"><i class="lni-phone-handset"></i> P: +62 8953 3803
+                                    3117</a>
                             </li>
                             <li>
                                 <a href="mailto:"><i class="lni-envelope"></i> E: nihon05sjc@gmail.com</a>

@@ -168,9 +168,9 @@
                     <a href="#wassap" class="text-muted"><small>Pastikan Nomor Whatsappmu Aktif</small></a>
                 </div>
                 <div class="form-group">
-                    <label id="pinning" for="example-email-input" class="form-control-label">PIN</label>
+                    <label id="pinning" for="example-email-input" class="form-control-label">Buat PIN</label>
                     <input name="pin" class="form-control" type="number" placeholder="6 Digit Angka" id="example-email-input" required>
-                    <a href="#pinning" class="text-muted"><small>PIN digunakan untuk mengedit formulir</small></a>
+                    <a href="#pinning" class="text-muted" data-toggle="tooltip" data-placement="top" title="PIN digunakan untuk mengedit formulir apabila terdapat kesalahan"><small>Apa Kegunaan PIN?</small></a>
                 </div>
                 <div class="form-group">
                     <label id="secure" for="example-email-input" class="form-control-label">Kode Pendaftaran</label>

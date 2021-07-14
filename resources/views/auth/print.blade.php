@@ -201,11 +201,11 @@
                     </div>
                     <div class="form-group">
                         <label for="example-email-input" class="form-control-label">NIS</label>
-                        <input class="form-control" type="email" value="{{$key->stb}}" id="example-email-input" readonly>
+                        <input class="form-control" type="text" value="{{$key->stb}}" id="example-email-input" readonly>
                     </div>
                     <div class="form-group">
                         <label for="example-url-input" class="form-control-label">Jenis Kelamin</label>
-                        <input class="form-control" type="url" value="{{$key->gender}}" id="example-url-input" readonly>
+                        <input class="form-control" type="text" value="{{$key->gender}}" id="example-url-input" readonly>
                     </div>
                     <div class="form-group">
                         <label for="example-tel-input" class="form-control-label">Phone</label>
@@ -213,11 +213,11 @@
                     </div>
                     <div class="form-group">
                         <label for="example-password-input" class="form-control-label">Kelas</label>
-                        <input class="form-control" type="password" value="{{$key->kelas}}" id="example-password-input" readonly>
+                        <input class="form-control" type="text" value="{{$key->kelas}}" id="example-password-input" readonly>
                     </div>
                     <div class="form-group">
                         <label for="example-number-input" class="form-control-label">PIN</label>
-                        <input class="form-control" type="number" value="23" id="example-number-input" value="{{$key->pin}}" readonly>
+                        <input class="form-control" type="number" vid="example-number-input" value="{{$key->pin}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="example-datetime-local-input" class="form-control-label">{{$key->tgl_daftar}}</label>
