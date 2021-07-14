@@ -166,7 +166,6 @@
                                                 <span class="status">{{$key->name}}</span>
                                             </td>
                                             <td>
-                                                @if ($key->id != 1)
                                                 <div class="dropdown">
                                                     <a class="btn btn-sm btn-icon-only text-light" href="#"
                                                         role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -178,7 +177,6 @@
                                                             class="dropdown-item">Edit Formulir</a>
                                                     </div>
                                                 </div>
-                                                @endif
                                             </td>
                                         </tr>
                                         {{-- SELESAI table --}}
