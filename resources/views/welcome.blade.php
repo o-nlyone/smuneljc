@@ -38,7 +38,7 @@
         <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a href="index.html" class="navbar-brand"><img style="width:100px; height:auto"
+                <a href="/" class="navbar-brand"><img style="width:100px; height:auto"
                         src="{{asset('home/assets/img/logo.png')}}" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
