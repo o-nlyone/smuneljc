@@ -141,7 +141,7 @@
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col" class="sort" data-sort="name">No.</th>
-                                            <th scope="col" class="sort" data-sort="budget">Stambuk</th>
+                                            <th scope="col" class="sort" data-sort="budget">NISN</th>
                                             <th scope="col" class="sort" data-sort="status">Nama</th>
                                             <th scope="col" class="sort" data-sort="status">Edit</th>
                                         </tr>
@@ -245,8 +245,7 @@
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label for="example-search-input"
-                                                                            class="form-control-label">NIS (bukan
-                                                                            NISN)</label>
+                                                                            class="form-control-label">NISN</label>
                                                                         <input name="stb" class="form-control"
                                                                             type="search" value="{{$key->stb}}"
                                                                             placeholder="2021xxx"
