@@ -144,8 +144,8 @@
                     <input name="name" class="form-control" type="text" placeholder="Nama Lengkap" id="example-text-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="example-search-input" class="form-control-label">NIS (bukan NISN)</label>
-                    <input name="stb" class="form-control" type="search" placeholder="2021xxx" id="example-search-input" required>
+                    <label for="example-search-input" class="form-control-label">NISN</label>
+                    <input name="stb" class="form-control" type="search" placeholder="001234567" id="example-search-input" required>
                 </div>
                 <div class="form-group">
                 <label for="example-search-input" class="form-control-label">Jenis Kelamin</label>
