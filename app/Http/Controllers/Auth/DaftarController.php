@@ -48,7 +48,7 @@ class DaftarController extends Controller
                 ));
                 return back()->with('success', "Pendaftaran Sukses.");
             } else {
-                return back()->with('error', "Kode Pendaftaran Salah, Lihat di Grup Gugus");
+                return back()->with('error-code', "Kode Pendaftaran Salah, Silahkan DM Instagram");
             }
         } catch (\Exception $e) {
             return back()->with('error', 'Stb Telah Terdaftar / Form Error')->withInput();

@@ -126,6 +126,11 @@
                     <strong>Error!</strong> {{session('error')}}
                 </div>
               @endif
+              @if (session()->get('error-code'))
+                <div class="alert alert-danger" role="alert">
+                    <strong>Error!</strong> {{session('error-code')}} <a href="https://www.instagram.com/smuneljc/" class="text-dark">@smuneljc</a> / Chat WA <a href="https://wa.me/62895338033117" class="text-dark">DISINI</a>
+                </div>
+              @endif
               @if (session()->get('success'))
                 <div class="alert alert-success" role="alert">
                     <strong>Success!</strong> {{session('success')}}
