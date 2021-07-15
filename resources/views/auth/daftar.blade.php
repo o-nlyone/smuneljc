@@ -168,18 +168,18 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">+62</span>
                         </div>
-                        <input name="phone" type="text" class="form-control" placeholder="81234567890" aria-label="81234567890" aria-describedby="basic-addon1">
+                        <input name="phone" type="number" class="form-control" placeholder="81234567890" aria-label="81234567890" aria-describedby="basic-addon1">
                     </div>
                     <a href="#wassap" class="text-muted"><small>Pastikan Nomor Whatsappmu Aktif</small></a>
                 </div>
                 <div class="form-group">
                     <label id="pinning" for="example-email-input" class="form-control-label">Buat PIN</label>
-                    <input name="pin" class="form-control" type="number" placeholder="6 Digit Angka" id="example-email-input" required>
+                    <input name="pin" class="form-control" type="number" placeholder="6 Digit Angka, Contoh (123456)" id="example-email-input" required>
                     <a href="#pinning" class="text-muted" data-toggle="tooltip" data-placement="top" title="PIN digunakan untuk mengedit formulir apabila terdapat kesalahan"><small>Apa Kegunaan PIN?</small></a>
                 </div>
                 <div class="form-group">
                     <label id="secure" for="example-email-input" class="form-control-label">Kode Pendaftaran</label>
-                    <input name="secure" class="form-control" type="text" onkeyup="this.value = this.value.toUpperCase();" placeholder="Kode Unik" id="example-email-input" required>
+                    <input name="secure" class="form-control" type="text" onkeyup="this.value = this.value.toUpperCase();" placeholder="******" id="example-email-input" required>
                     <a href="#secure" class="text-muted" data-toggle="tooltip" data-placement="top" title="DM Instagram @smuneljc / Tekan 'Bingung' dibawah Untuk Mengetahui Kode"><small>Lihat Kode Pendaftaran</small></a>
                 </div>
                 <div class="text-center">
