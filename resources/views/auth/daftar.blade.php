@@ -180,7 +180,7 @@
                 <div class="form-group">
                     <label id="secure" for="example-email-input" class="form-control-label">Kode Pendaftaran</label>
                     <input name="secure" class="form-control" type="text" onkeyup="this.value = this.value.toUpperCase();" placeholder="Kode Unik" id="example-email-input" required>
-                    <a href="#secure" class="text-muted" data-toggle="tooltip" data-placement="top" title="Kode ini Muncul disetiap Chat SJC di Grup GUGUS"><small>Dimana itu Kode Pendaftaran?</small></a>
+                    <a href="#secure" class="text-muted" data-toggle="tooltip" data-placement="top" title="DM Instagram @smuneljc / Tekan 'Bingung' dibawah Untuk Mengetahui Kode"><small>Lihat Kode Pendaftaran</small></a>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary my-4">Daftar SJC</button>
