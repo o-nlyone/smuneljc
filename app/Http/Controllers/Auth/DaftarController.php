@@ -82,23 +82,5 @@ class DaftarController extends Controller
         }
 }
 
-    public function wamessage(Request $request){
-            try {
-                DB::table('details')->where('idtext', '1')->update([
-                    'pesan' => $request->pesan]);
-                    return back()->with('success', 'Pesan Sudah Di Perbaharui');
-            } catch (Exception $err) {
-                return back()->with('err-log', 'error')->withInput($request->input());
-            }
-    }
 
-    public function securecode(Request $request){
-        try {
-            DB::table('details')->where('idtext', '2')->update([
-                'pesan' => $request->pesan]);
-                return back()->with('success', 'Security Code Sudah Di Perbaharui');
-        } catch (Exception $err) {
-            return back()->with('err-log', 'error')->withInput($request->input());
-        }
-}
 }

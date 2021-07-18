@@ -1,3 +1,6 @@
+@php
+    $contactwa = DB::table('details')->where('idtext', '3')->first();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -521,8 +524,7 @@
                                     Makassar</a>
                             </li>
                             <li>
-                                <a href="http://wa.me/62895338033117"><i class="lni-phone-handset"></i> P: +62 8953 3803
-                                    3117</a>
+                                <a href="http://wa.me/62{{$contactwa->pesan}}"><i class="lni-phone-handset"></i> P: +62{{$contactwa->pesan}}</a>
                             </li>
                             <li>
                                 <a href="mailto:"><i class="lni-envelope"></i> E: nihon05sjc@gmail.com</a>

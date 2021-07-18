@@ -9,6 +9,9 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
+@php
+    $contactwa = DB::table('details')->where('idtext', '3')->first();
+@endphp
 <!DOCTYPE html>
 <html>
 
@@ -128,7 +131,7 @@
               @endif
               @if (session()->get('error-code'))
                 <div class="alert alert-danger" role="alert">
-                    <strong>Error!</strong> {{session('error-code')}} <a href="https://www.instagram.com/smuneljc/" class="text-dark">@smuneljc</a> / Chat WA <a href="https://wa.me/62895338033117" class="text-dark">DISINI</a>
+                    <strong>Error!</strong> {{session('error-code')}} <a href="https://www.instagram.com/smuneljc/" class="text-dark">@smuneljc</a> / Chat WA <a href="https://wa.me/62{{$contactwa->pesan}}" class="text-dark">DISINI</a>
                 </div>
               @endif
               @if (session()->get('success'))
@@ -190,7 +193,10 @@
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <a href="https://wa.me/62895338033117" class="text-default"><small>Bingung?, Tanyakan Disini</small></a>
+                @php
+                    $contactwa = DB::table('details')->where('idtext', '3')->first();
+                @endphp
+              <a href="https://wa.me/62{{$contactwa->pesan}}" class="text-default"><small>Bingung?, Tanyakan Disini</small></a>
             </div>
             <div class="col-6 text-right">
               {{-- <a href="#" class="text-light"><small>PIN digunakan untuk mengedit</small></a> --}}

@@ -9,6 +9,9 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
+@php
+    $contactwa = DB::table('details')->where('idtext', '3')->first();
+@endphp
 <!DOCTYPE html>
 <html>
 
@@ -301,7 +304,7 @@
                         <div class="col-6">
                         </div>
                         <div class="col-6 text-right">
-                            <a href="https://wa.me/62895338033117" class="text-dark"><small>Lupa Pin?, Chat
+                            <a href="https://wa.me/62{{$contactwa->pesan}}" class="text-dark"><small>Lupa Pin?, Chat
                                     disini</small></a>
                         </div>
                     </div>

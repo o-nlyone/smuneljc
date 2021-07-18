@@ -10,6 +10,9 @@ $cowok = DB::table('forms')->where('gender', '=', 'L')->count();
 $cewek = DB::table('forms')->where('gender', '=', 'P')->count();
 $grow20 = number_format(DB::table('forms')->count()/21*100)-100;
 $grow19 = DB::table('forms')->count()-27/100;
+$pesan = DB::table('details')->where('idtext', '1')->first();
+$code = DB::table('details')->where('idtext', '2')->first();
+$contactwa = DB::table('details')->where('idtext', '3')->first();
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,6 +97,15 @@ $grow19 = DB::table('forms')->count()-27/100;
                                 data-target="#pesan">
                                 <i class="ni ni-single-copy-04"></i>
                                 <span class="nav-link-text">Pesan Default</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#whatsappcon">
+                                <i class="ni ni-mobile-button"></i>
+                                <span class="nav-link-text">Contact Number</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -336,8 +348,7 @@ $grow19 = DB::table('forms')->count()-27/100;
 
                                     <?php
                             $querys = DB::table('forms')->get();
-                            $pesan = DB::table('details')->where('idtext', '1')->first();
-                            $code = DB::table('details')->where('idtext', '2')->first();
+
                             foreach ($querys as $key) {
                             ?>
 
@@ -592,6 +603,35 @@ $grow19 = DB::table('forms')->count()-27/100;
             </div>
           </div>
         {{-- endmodalpesan --}}
+
+                {{-- modalpesan --}}
+                <div class="modal fade" id="whatsappcon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Nomor WhatsApp</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form action="numberwa" method="post">
+                            @csrf
+                            <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Nomor Telepon</label><br>
+                                        <input name="pesan" type="number" placeholder="812345678 (tanpa angka 0 didepan)" class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{$contactwa->pesan}}">
+                                        <a href="#" class="text-light"><small>Nomor Telepon Ini Akan Menjadi Link untuk Banyak tombol contact di Website</small></a>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                {{-- endmodalpesan --}}
     <!-- Argon Scripts -->
     <!-- Core -->
     <script src="{{asset('dashboard/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
