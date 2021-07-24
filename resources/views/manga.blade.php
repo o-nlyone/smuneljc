@@ -1,123 +1,60 @@
+@php
+    use Jenssegers\Agent\Agent as Agent;
+@endphp
 <!DOCTYPE html>
-<!-- saved from url=(0052)https://colorlib.com/etc/cs/comingsoon_04/index.html -->
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Workshop Manga SJC</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="icon" type="image/png" href="{{asset('dashboard/assets/img/brand/favicon.png')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/bootstrap.min.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/font-awesome.min.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/material-design-iconic-font.min.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/animate.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/select2.min.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/util.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('mangas/main.css')}}">
-
-    <meta name="robots" content="noindex, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SJC Workshop Manga</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('mangas/assets/css/bd-coming-soon.css')}}">
+    <style>
+    .navbar-brands {
+        font-size: 1.25rem;
+        line-height: inherit;
+        display: inline-block;
+        margin-right: 1rem;
+        padding-top: .0625rem;
+        padding-bottom: .0625rem;
+        white-space: nowrap
+    }
+    </style>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
-    <div class="bg-g2 size1 flex-w flex-col-c-sb p-l-15 p-r-15 p-t-55 p-b-35 respon1">
-        <span></span>
-        <div class="flex-col-c p-t-50 p-b-50">
-            <h3 class="l1-txt1 txt-center p-b-10">
-                Workshop Manga SJC
-            </h3>
-            <p class="txt-center l1-txt2 p-b-60">
-                Akan di gelar,
-            </p>
-            <div class="flex-w flex-c cd100 p-b-82">
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 days"></span>
-                    <span class="s1-txt1">Hari</span>
-                </div>
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 hours">17</span>
-                    <span class="s1-txt1">Jam</span>
-                </div>
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 minutes">59</span>
-                    <span class="s1-txt1">Menit</span>
-                </div>
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 seconds">44</span>
-                    <span class="s1-txt1">Detik</span>
-                </div>
-            </div>
-            <a class="flex-c-m s1-txt2 size3 how-btn" href="https://www.instagram.com/smuneljc">
-                Follow us for update now!
-            </a>
+<body class="min-vh-100 d-flex flex-column">
+
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-dark bg-transparenet">
+                <a class="navbar-brands" href="#">
+                    <img src="{{asset('mangas/assets/images/logo.svg')}}" alt="SJC">
+                </a>
+                @if ($agent->isMobile())
+                    <span style="font-size: 10px" class="navbar-text">13:30 WITA</span>
+                    <span style="font-size: 10px" class="navbar-text">25 Juli 2021</span>
+                @else
+                <span class="navbar-text ml-auto d-none d-sm-inline-block">13:30 WITA</span>
+                <span class="navbar-text d-none d-sm-inline-block">25 Juli 2021</span>
+                @endif
+            </nav>
         </div>
-        <span class="s1-txt3 txt-center">
-            @ 2021 Smunel Japanese Community
-        </span>
-    </div>
-
-    <script type="text/javascript" async="" src="{{asset('mangas/analytics.js')}}"></script>
-    <script src="{{asset('mangas/jquery-3.2.1.min.js')}}"></script>
-
-    <script src="{{asset('mangas/popper.js')}}"></script>
-    <script src="{{asset('mangas/bootstrap.min.js')}}"></script>
-
-    <script src="{{asset('mangas/select2.min.js')}}"></script>
-
-    <script src="{{asset('mangas/moment.min.js')}}"></script>
-    <script src="{{asset('mangas/moment-timezone.min.js')}}"></script>
-    <script src="{{asset('mangas/moment-timezone-with-data.min.js')}}"></script>
-    <script src="{{asset('mangas/countdowntime.js')}}"></script>
-    <script>
-        $('.cd100').countdown100({
-            // Set Endtime here
-            // Endtime must be > current time
-            endtimeYear: 0,
-            endtimeMonth: 1,
-            endtimeDate: 6,
-            endtimeHours: 23,
-            endtimeMinutes: 1,
-            endtimeSeconds: 10,
-            timeZone: "Jakarta"
-            // ex:  timeZone: "America/New_York", can be empty
-            // go to " http://momentjs.com/timezone/ " to get timezone
-        });
-
-    </script>
-
-    <script src="{{asset('mangas/tilt.jquery.min.js')}}"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
-
-    </script>
-
-    <script src="{{asset('mangas/main.js')}}"></script>
-
-    <script async="" src="{{asset('mangas/js')}}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-
-    </script>
-    <script defer="" src="{{asset('mangas/beacon.min.js')}}"
-        data-cf-beacon="{&quot;rayId&quot;:&quot;67057f5f6af7dded&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2021.6.0&quot;,&quot;si&quot;:10}">
-    </script>
-
+    </header>
+    <main class="my-auto">
+        <div class="container">
+            <h1 class="page-title">Workshop Manga SJC</h1>
+            <p class="page-description">Hanya Untuk Siswa SMA Negeri 5 Makassar & Anggota Nihonbu Doumei
+            </p>
+            <p>Link Workshop</p>
+            <nav class="footer-social-links">
+                <a href="https://meet.google.com/xyr-nzbj-pdk" class="social-link"><i class="mdi mdi-google"></i></a>
+            </nav>
+        </div>
+    </main>
 </body>
 
 </html>
