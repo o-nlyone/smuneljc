@@ -174,7 +174,7 @@
                         <ul class="description">
                             <li>Gakuensai Festival</li>
                             <li>Tenji Kyanpu</li>
-                            <li>Workshop Manga</li>
+                            <li><a style="text-light" href="manga">Workshop Manga</a></li>
                             <li>Kegiatan Mingguan</li>
                             <li>PKK-SJC</li>
                         </ul>
