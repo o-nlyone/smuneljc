@@ -16,7 +16,7 @@ Route::group(['middleware'=> ['guest']], function(){
     // });
     Route::post('daftar', [DaftarController::class, 'daftar']);
     Route::post('pincheck', [DaftarController::class, 'pincheck']);
-    Route::get('biodata', function ($id) {
+    Route::get('biodata', function () {
         return redirect()->to('https://forms.gle/r71YKQDnFfqyh6z16');
     });
 });
